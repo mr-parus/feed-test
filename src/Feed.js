@@ -78,7 +78,7 @@ export class Feed extends React.Component {
         const { reactions = 0, comments = 0 } = item;
         const { TRENDING_NORM, REACTIONS_TRENDING_WEIGHT } = this.state;
 
-        return (reactions + comments * REACTIONS_TRENDING_WEIGHT) / TRENDING_NORM;
+        return (reactions * REACTIONS_TRENDING_WEIGHT + comments) / TRENDING_NORM;
     }
 
     updateItem(itemId, update) {
@@ -136,6 +136,8 @@ export class Feed extends React.Component {
             UPDATE_WEIGHT * result.updateScore +
             result.trendingScore * TRENDING_WEIGHT;
 
+        result.trendingRate = trendingRate;
+
         return result;
     }
 
@@ -144,7 +146,7 @@ export class Feed extends React.Component {
             <div>
                 {itemScores.map(
                     (
-                        { item, totalScore, trendingScore, updateScore, createScore },
+                        { item, totalScore, trendingScore, updateScore, createScore, trendingRate },
                         i
                     ) => (
                         <li key={i} className={item.id === this.state.selected ? "selected" : ""}>
@@ -155,6 +157,7 @@ export class Feed extends React.Component {
                             <h3>Trending Score {trendingScore}</h3>
                             <h3>Update Score {updateScore}</h3>
                             <h3>Publish Score {createScore}</h3>
+                            <h3>Trending rate {trendingRate}</h3>
 
                             {item.id !== this.state.selected
                                 ? (      <button className='selectButton'
