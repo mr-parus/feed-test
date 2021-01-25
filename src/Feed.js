@@ -258,7 +258,7 @@ export class Feed extends React.Component {
 
         return (
             <div>
-                <h1>Params</h1>
+                <h1>Params v0.0.1</h1>
                 {Object.entries(this.state)
                     .filter(([key]) => !["items", 'selected', 'TRENDING_NORM'].includes(key))
                     .map(([key, value], i) => {
