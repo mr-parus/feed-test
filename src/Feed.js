@@ -139,7 +139,7 @@ export class Feed extends React.Component {
         return result;
     }
 
-    renderItems(itemScores) {
+    renderItems(itemScores, disabled = false) {
         return (
             <div>
                 {itemScores.map(
@@ -174,6 +174,7 @@ export class Feed extends React.Component {
                                     <div>
                                         <small>Created</small>
                                         <input
+                                            disabled={disabled}
                                             type="number"
                                             value={item.createdAt}
                                             min={0}
@@ -192,6 +193,7 @@ export class Feed extends React.Component {
                                     <div>
                                         <small>Updated</small>
                                         <input
+                                            disabled={disabled}
                                             type="number"
                                             value={item.updatedAt}
                                             min={0}
@@ -209,6 +211,7 @@ export class Feed extends React.Component {
                                     <div>
                                         <small>Comments</small>
                                         <input
+                                            disabled={disabled}
                                             type="number"
                                             value={item.comments}
                                             min={0}
@@ -222,6 +225,7 @@ export class Feed extends React.Component {
                                     <div>
                                         <small>Reactions</small>
                                         <input
+                                            disabled={disabled}
                                             type="number"
                                             value={item.reactions}
                                             min={0}
@@ -284,7 +288,7 @@ export class Feed extends React.Component {
                             ?this.renderItems([ this.score(this.state.items[this.state.selected], maxTrendingRate)])
                             : <li>Select item to edit</li>}
                     </div>
-                    {this.renderItems(itemScores)}
+                    {this.renderItems(itemScores, true)}
                 </div>
             </div>
         );
