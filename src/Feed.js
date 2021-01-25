@@ -35,6 +35,7 @@ export class Feed extends React.Component {
             comments: Math.floor(Math.random() * this.state.CREATE_NORM),
             createdAt,
             updatedAt: Math.floor(Math.random() * createdAt),
+            color: "#" + Math.floor(Math.random()*16777215).toString(16),
         };
     }
 
@@ -165,6 +166,8 @@ export class Feed extends React.Component {
                             }
 
                             <hr/>
+
+                            <b><i style={{color: item.color}}>{item.id}</i></b>
 
                             <div style={{display:'flex', justifyContent:'space-around'}}>
                                 <div>
