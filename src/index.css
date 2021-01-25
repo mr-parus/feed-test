@@ -1,0 +1,80 @@
+body {
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+li {
+  position: relative;
+  width: 350px;
+  border: 1px solid grey;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.container{
+  list-style-type: none;
+  padding: 0 50px;
+}
+
+li i {
+  font-size: 10px;
+}
+
+input {
+  margin: 0 10px;
+  width: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+
+h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+h3{
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.named {
+  border: 4px gold solid;
+}
+
+.selected {
+  background-color: #bdccd4;
+}
+
+.selectButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 20px;
+}
+
+.name {
+  color: red;
+}
+
+button {
+  margin: 10px;
+}
+
+.selected {
+
+}
+
+
