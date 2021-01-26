@@ -276,6 +276,9 @@ export class Feed extends React.Component {
                             xaxis: {
                                 showticklabels: false
                             },
+                            yaxis: {
+                                dtick: 0.1,
+                            },
                         }}
                         config={{displayModeBar: false, editable: false,}}
                     />
