@@ -10,18 +10,24 @@ body {
   transition: all 0.2s;
 }
 
-li {
+ol li {
+  list-style-type: none;
   position: relative;
   width: 350px;
   border: 1px solid grey;
   padding: 5px;
   border-radius: 10px;
-  margin: 8px 0;
+  margin: 8px;
 }
 
-.container{
-  list-style-type: none;
-  padding: 0 50px;
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 li i {
