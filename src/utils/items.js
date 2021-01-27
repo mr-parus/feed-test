@@ -21,8 +21,8 @@ export const createItem = (seed) => {
 
     return {
         id: makeId(),
-        reactions: Math.floor(Math.random() * 10 * seed),
-        comments: Math.floor(Math.random() * 10 * seed),
+        reactions: Math.floor(Math.random() * 10 * createdAt),
+        comments: Math.floor(Math.random() * 5 * createdAt),
         createdAt,
         updatedAt: Math.floor(Math.random() * createdAt),
         color: getRandomColor()
